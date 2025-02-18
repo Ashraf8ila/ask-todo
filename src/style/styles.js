@@ -205,21 +205,6 @@ export const AppContainer = styled.div`
   text-align: center;
 `;
 
-export const Logo = styled.img`
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-
-  &:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-
-  &.react:hover {
-    filter: drop-shadow(0 0 2em #61dafbaa);
-  }
-`;
-
 export const Card = styled.div`
   padding: 2em;
   background-color: #444;
@@ -228,23 +213,3 @@ export const Card = styled.div`
   color: rgba(255, 255, 255, 0.87);
 `;
 
-export const ReadTheDocs = styled.p`
-  color: #888;
-`;
-
-export const LogoSpin = styled.div`
-  @keyframes logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    a:nth-of-type(2) & {
-      animation: logo-spin infinite 20s linear;
-    }
-  }
-`;
