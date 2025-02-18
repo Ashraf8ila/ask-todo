@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { Navbar, NavList, NavItem, NavLink, NavOutline } from '../style/styles';
 import { FaHome, FaTachometerAlt, FaSignInAlt } from 'react-icons/fa';
 
-function NavBar() {
+function NavBar({ setActiveView }) {
   const [active, setActive] = useState('home');
 
   const handleNavClick = (newActive) => {
     setActive(newActive);
+    setActiveView(newActive);
   };
 
   const navItems = [
@@ -31,7 +32,7 @@ function NavBar() {
           {reorderedNavItems.map((item, index) => (
             <NavItem key={item.name} className={active === item.name ? 'active' : ''}>
               <NavLink
-                href={item.name}
+                href="#"
                 className={active === item.name ? 'active' : ''}
                 onClick={() => handleNavClick(item.name)}
               >
